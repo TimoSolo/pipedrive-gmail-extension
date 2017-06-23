@@ -1,0 +1,26 @@
+{
+  "name": "Pipedrive BCC Deal link Gmail Extension",
+  "short_name": "Pipedrive Gmail Links",
+  "description": "Add a link for pipedrive deals based on bcc",
+  "author": "Timothy Solomon - FreeRadical Apps - @timosolo",
+  "version": "0.4",
+  "icons": { "16": "icon16.png",
+          "19": "icon19.png",
+          "48": "icon48.png",
+          "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "js": ["inboxsdk.js","content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "https://mail.google.com/",
+    "https://inbox.google.com/"
+  ],
+  "manifest_version": 2
+}
